@@ -1,2 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-@import "https://unpkg.com/open-props";
+@import "open-props/style";
+@import "open-props/normalize";
+@import "open-props/animations";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+body {
+  font-family: "Plus Jakarta Sans Variable", sans-serif;
+}

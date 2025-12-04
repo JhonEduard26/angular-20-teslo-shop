@@ -1,0 +1,13 @@
+<div class="product-card">
+  <figure>
+    <img [src]="imageUrl()" [alt]="product().title" />
+  </figure>
+  <div class="product-info">
+    <h4>{{ product().title }}</h4>
+    <p>{{ product().description | slice : 0 : 70 }}...</p>
+
+    <div class="product-actions">
+      <a [routerLink]="['/product', product().slug]">ver producto</a>
+    </div>
+  </div>
+</div>

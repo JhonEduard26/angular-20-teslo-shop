@@ -1,1 +1,23 @@
-<p>front-navbar works!</p>
+<div>
+  <nav>
+    <a [routerLink]="['/']">Teslo shop</a>
+    <ul>
+      <li>
+        <a [routerLink]="['gender/men']" [routerLinkActive]="['is-active']">
+          Hombres
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['gender/women']" [routerLinkActive]="['is-active']">
+          Mujeres
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['gender/kids']" [routerLinkActive]="['is-active']">
+          Niños
+        </a>
+      </li>
+    </ul>
+    <button>Cart ( <span>0</span> )</button>
+  </nav>
+</div>

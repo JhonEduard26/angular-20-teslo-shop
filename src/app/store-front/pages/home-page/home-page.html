@@ -1,1 +1,10 @@
-<p>home-page works!</p>
+<h1>Todos los productos</h1>
+<h2>Para todos los gustos</h2>
+
+<section class="product-container">
+  @for (product of productsResource.value()?.products ?? []; track product) {
+  <product-card [product]="product" />
+  } @empty {
+  <p>No hay productos</p>
+  }
+</section>
