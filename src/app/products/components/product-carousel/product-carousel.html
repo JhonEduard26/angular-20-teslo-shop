@@ -1,0 +1,12 @@
+<div class="carousel">
+  @for (image of images(); track image) {
+  <div class="carousel__slide">
+    <img
+      [src]="image | productImage"
+      alt="Imagen del producto"
+      width="500px"
+      height="500px"
+    />
+  </div>
+  }
+</div>

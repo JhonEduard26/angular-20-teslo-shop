@@ -1,0 +1,23 @@
+.loading-container {
+  display: grid;
+  place-items: center;
+  height: 80dvh;
+}
+.loading-spinner {
+  animation: var(--animation-spin);
+}
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-2);
+
+  & div h2 {
+    margin-bottom: var(--size-3);
+  }
+}
+@media (width >= 768px) {
+  .product-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-4);
+  }
+}
