@@ -1,0 +1,19 @@
+h1 {
+  font-size: var(--font-size-5);
+  margin-bottom: var(--size-3);
+}
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-5);
+}
+@media (width >= 480px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width >= 768px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

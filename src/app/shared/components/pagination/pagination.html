@@ -1,0 +1,13 @@
+<nav>
+  @for (pag of getPageArray(); track pag) {
+  <button
+    [routerLink]=""
+    [class.active]="pag === activePage()"
+    (click)="activePage.set(pag)"
+    [routerLink]="[]"
+    [queryParams]="{ page: pag }"
+  >
+    {{ pag }}
+  </button>
+  }
+</nav>

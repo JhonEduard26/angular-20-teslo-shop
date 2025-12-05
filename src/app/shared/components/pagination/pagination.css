@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-2);
+  margin-block-start: var(--size-8);
+  margin-block-end: var(--size-8);
+  font-size: var(--font-size-0);
+
+  & button {
+    font-weight: var(--font-weight-6);
+    padding-inline: var(--size-3);
+    padding-block: var(--size-1);
+    border-radius: var(--radius-1);
+    transition: background-color 300ms ease;
+
+    &[disabled] {
+      cursor: not-allowed;
+      color: var(--gray-5);
+      border-color: var(--gray-5);
+    }
+
+    &:hover:not([disabled]) {
+      background-color: var(--blue-5);
+      color: white;
+    }
+  }
+
+  & button.active {
+    background-color: var(--blue-5);
+    color: white;
+  }
+}

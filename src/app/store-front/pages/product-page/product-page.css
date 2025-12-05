@@ -1,11 +1,3 @@
-.loading-container {
-  display: grid;
-  place-items: center;
-  height: 80dvh;
-}
-.loading-spinner {
-  animation: var(--animation-spin);
-}
 .product-container {
   display: grid;
   grid-template-columns: 1fr;

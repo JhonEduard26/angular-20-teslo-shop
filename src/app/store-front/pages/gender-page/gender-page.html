@@ -1,1 +1,15 @@
-<p>gender-page works!</p>
+<h1>Productos de {{ gender() | i18nSelect : genderMapping }}</h1>
+
+<div class="product-container">
+  <!--  -->
+  @for (product of productResource.value()?.products; track product.id) {
+  <product-card [product]="product" />
+  } @empty {
+  <p>No hay productos</p>
+  }
+</div>
+
+<app-pagination
+  [pages]="productResource.value()?.pages ?? 0"
+  [currentPage]="paginationService.currentPage()"
+/>
