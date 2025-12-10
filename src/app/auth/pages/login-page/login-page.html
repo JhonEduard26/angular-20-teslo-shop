@@ -1,0 +1,45 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <input
+      formControlName="email"
+      type="text"
+      placeholder="Correo electrónico"
+    />
+  </div>
+  <div>
+    <input
+      formControlName="password"
+      type="password"
+      placeholder="Contraseña"
+    />
+  </div>
+
+  <button type="submit">Iniciar sesión</button>
+
+  @if (hasError()) {
+  <div role="alert" class="alert">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="m15 9-6 6" />
+      <path d="m9 9 6 6" />
+    </svg>
+    <span>
+      Error en el formulario, por favor verifica los datos ingresados.
+    </span>
+  </div>
+  }
+
+  <p>
+    ¿No tienes una cuenta?
+    <a [routerLink]="['/auth/register']">Crea una acá</a>
+  </p>
+</form>
