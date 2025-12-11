@@ -34,4 +34,43 @@ nav {
       color: var(--blue-7);
     }
   }
+
+  & .navbar-end {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--size-3);
+
+    & button {
+      padding: var(--size-1) var(--size-3);
+      border-radius: var(--radius-2);
+      background-color: var(--red-7);
+      color: white;
+      transition: background-color 300ms ease;
+
+      &:hover {
+        background-color: var(--red-6);
+      }
+    }
+
+    & a.btn-link {
+      padding: var(--size-1) var(--size-3);
+      border-radius: var(--radius-2);
+      border: 1px solid var(--gray-4);
+      text-decoration: none;
+      font-weight: var(--font-weight-6);
+      background-color: var(--blue-6);
+      color: var(--stone-1);
+      transition: background-color 300ms ease;
+
+      &:hover {
+        background-color: var(--blue-5);
+      }
+    }
+
+    & button.btn-loader {
+      background-color: var(--gray-2);
+      color: var(--gray-7);
+    }
+  }
 }

@@ -18,6 +18,19 @@
         </a>
       </li>
     </ul>
-    <button>Cart ( <span>0</span> )</button>
+    <div class="navbar-end">
+      @if (authService.authStatus() === 'authenticated') {
+      <span>{{ authService.user()?.fullName }}</span>
+      <button (click)="authService.logout()">Salir</button>
+      }
+      <!--  -->
+      @else if (authService.authStatus() === 'not-authenticated') {
+      <a class="btn-link" [routerLink]="['/auth/login']">Ingresar</a>
+      }
+      <!--  -->
+      @else {
+      <button class="btn-loader">Cargando...</button>
+      }
+    </div>
   </nav>
 </div>
